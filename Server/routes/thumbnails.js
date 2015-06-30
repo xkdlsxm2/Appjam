@@ -4,9 +4,9 @@ var mysql = require('mysql');
 var router = express.Router();
 var connection = mysql.createConnection({
 
-	'host' : 'aws-rds-instance.clpupei7ldak.us-west-1.rds.amazonaws.com',
+	'host' : 'appjam.cyjao5zjyirq.us-west-2.rds.amazonaws.com',
 	'user' : 'user',
-	'password' : 'aws_password',
+	'password' : 'appjam123',
 	'database' : 'sopt',
 });
 
