@@ -12,7 +12,8 @@ router.get('/:content_id',function(req,res,next){
     connection.query('select * from board where id=?;',[req.params.content_id],function(error,cursor){
         if(cursor.length>0)
             res.json(cursor[0]);
-        elseres.status(503).json({result:false, reason:"cannot find selected article"});
+        else
+            res.status(503).json({result:false, reason:"cannot find selected article"});
     });
 });
 
@@ -24,7 +25,8 @@ router.post('/', function(req, res,next){
                     res.json({
                         result:true, id:cursor[0].id, title:cursor[0].title,timestamp: cursor[0].timestamp,});
                 }
-                elseres.status(503).json({result:false, reason:"Cannot post article"});
+                else
+                    res.status(503).json({result:false, reason:"Cannot post article"});
             });
         }
         else

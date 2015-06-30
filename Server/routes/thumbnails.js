@@ -1,6 +1,6 @@
-var expres = require('express');
+var express = require('express');
 var mysql = require('mysql');
-var router = expres.Router();
+var router = express.Router();
 var connection = mysql.createConnection({
     'host':'appjam.cyjao5zjyirq.us-west-2.rds.amazonaws.com',
     'user':'user',
