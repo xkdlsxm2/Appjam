@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/contents',contents);
+app.use('/contents', contents);
 app.use('/thumbnails', thumbnails);
 
 // catch 404 and forward to error handler
